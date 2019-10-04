@@ -1,0 +1,9 @@
+<%- include('partials/header.ejs'); -%>
+<h1>Home</h1>
+<p><%=  content %> </p>
+<% moreData.forEach(function(item){  %>
+<h1><%= item.title %></h1> 
+<p><%= item.content.substring(0,100) + "...." %></p>
+<a href="/posts/<%= item._id%> "> Read more </a> 
+<% } ) %>
+<%- include('partials/footer'); -%>
